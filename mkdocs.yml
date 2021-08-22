@@ -1,6 +1,12 @@
 site_name: JackTrip
 repo_url: https://github.com/jacktrip/jacktrip
 edit_uri: edit/dev/docs/
+plugins:
+  - doxygen:
+      packages:
+        - doxygen:
+            url : .
+            config : jacktrip_doxygen
 nav:
   - Home: index.md
   - User Guide:
@@ -11,6 +17,7 @@ nav:
       - Mac OS: Build/Mac.md
       - Windows: Build/Windows.md
     - Meson Build: Build/Meson_build.md
+    - API: doxygen
     - Development Tools:
       - Formatting: DevTools/Formatting.md
       - Static Analysis: DevTools/StaticAnalysis.md
@@ -30,3 +37,4 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.details
   - admonition
+
